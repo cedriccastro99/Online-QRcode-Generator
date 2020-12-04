@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src="js/FileSaver.min.js"></script>
+	<script type="text/javascript" src="js/qrcode.min.js"></script>
+
+	<title>QR code generator</title>
+</head>
+
+<header>
+	<nav>
+		<h1>Online QRcode Generator</h1>
+	</nav>
+</header>
+
+<body>
+
+<center>
+	<section id="maincontainer">
+		<section id="qrcode" onmouseenter="downloadQR()" onmouseout="downloadQR_2()"></section>
+		<section id="download_container" onmouseenter="downloadQR()" onmouseout="downloadQR_2()">
+			<button>Download QRcode</button>
+		</section>
+		<h3 id="text">Text here</h3>
+		<input type="text" id="userInput" onchange="generateQR()">
+		<button id="genBttn" onclick="generateQR()">Generate</button>
+	</section>
+</center>
+
+</body>
+
+
+<script type="text/javascript">
+	var userdata = document.getElementById('userInput');
+	var generate = new QRCode(document.getElementById('qrcode'));
+
+	var flag = 0;
+
+function generateQR() {
+	
+	var data = userdata.value;
+
+	generate.makeCode(userdata.value);
+
+	flag = 1;
+}
+
+function downloadQR(){
+	if(flag == 1){
+
+		var divelement = document.getElementById('download_container');
+
+		divelement.style.display = 'block';
+		
+	}
+}
+
+function downloadQR_2(){
+
+		var divelement = document.getElementById('download_container');
+
+		divelement.style.display = 'none';
+}
+
+</script>
+
+</html>
