@@ -31,29 +31,6 @@ header{
 	margin-top: 50px;
 }
 
-#download_container{
-	width: 255px;
-	height: 255px;
-	margin-top: -258px;
-	margin-bottom: 13px;
-	display: none;
-}
-
-#download_container button{
-	background-color: red;
-	color: black;
-	text-shadow: -1px 0 orange, 0 1px orange, 1px 0 orange, 0 -1px orange;
-	border-radius: 25px;
-	width: 175px;
-	height: 50px;
-	margin-top: 102px;
-	outline: none; 
-}
-
-#download_container button:hover{
-	background-color: yellow;
-}
-
 #text{
 	margin-top: 10px;
 	font-family: arial;
