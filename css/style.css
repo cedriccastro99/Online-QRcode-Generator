@@ -63,3 +63,13 @@ header{
 #genBttn:hover{
 	background-color: green;
 }
+
+@media screen and (max-width: 500px) {
+  header{
+  	width: 420px;
+  }
+
+  #maincontainer{
+  	margin-left: 32px;
+  }
+}
